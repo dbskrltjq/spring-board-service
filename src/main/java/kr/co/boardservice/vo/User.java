@@ -28,7 +28,7 @@ public class User {
 	@JsonIgnore
 	private String password;
 	
-	private String nickname;
+	private String name;
 	
 	private String email;
 	@JsonFormat(pattern="yyyy년 M월 d일")
@@ -36,13 +36,16 @@ public class User {
 	@JsonFormat(pattern="yyyy년 M월 d일")
 	private Date updatedDate;
 	
-	public User(Integer no, String id, String password, String nickname, String email) {
+	private String profileImage;
+	
+	public User(Integer no, String id, String password, String name, String email, String profileImage) {
 		super();
 		this.no = no;
 		this.id = id;
 		this.password = password;
-		this.nickname = nickname;
+		this.name = name;
 		this.email = email;
+		this.profileImage = profileImage;
 	}
 	
 	
