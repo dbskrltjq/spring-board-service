@@ -41,40 +41,32 @@
       </div>
       <div class="modal-body">
       	<p>아이디, 비밀번호, 이름, 이메일을 입력하세요.</p>
-            <form:form class="border bg-light p-3" method="post"  action="register" modelAttribute="userRegisterForm" enctype="multipart/form-data">
-                <div class="mb-3">
-                	<label for="id-field" class="form-label">아이디</label>
-                	<form:input class="form-control" path="id" id="id-field" />
-                	<form:errors path="id" class="text-danger small fst-italic"></form:errors>
+            <form class="border bg-light p-3" method="post" action="user/register" enctype="multipart/form-data">
+                <div class="form-floating mb-3">
+                	<input type="text" class="form-control" name="name" placeholder="아이디">
+                	<label for="floatingInput">아이디</label>
                 </div>
-                <div class="mb-3">
-                	<label for="password-field" class="form-label">비밀번호</label>
-                	<form:input class="form-control" type="password" path="password" id="password-field" placeholder="비밀번호는 영어 대소문자와 숫자로 8글자 ~ 20글자입니다."/>
-                	<form:errors path="password" class="text-danger small fst-italic"></form:errors>
+                <div class="form-floating mb-3">
+                	<input type="password" class="form-control" name="password" placeholder="비밀번호">
+                	<label for="floatingInput">비밀번호</label>
                 </div>
-                <div class="mb-3">
-                	<label for="name-field" class="form-label">이름</label>
-                	<form:input class="form-control" path="name" id="name-field" placeholder="이름은 한글로 2글자 이상입니다."/>
-                	<form:errors path="name" class="text-danger small fst-italic"></form:errors>
+                <div class="form-floating mb-3">
+                	<input type="text" class="form-control" name="name" placeholder="이름">
+                	<label for="floatingInput">이름</label>
                 </div>
-                <div class="mb-3">
-                	<label for="email-field" class="form-label">이메일</label>
-                	<form:input class="form-control" path="email" id="email-field" placeholder="sample@naver.com"/>
-                	<form:errors path="email" class="text-danger small fst-italic"></form:errors>
+                <div class="form-floating mb-3">
+                	<input type="text" class="form-control" name="email" placeholder="이메일">
+                	<label for="floatingInput">이메일</label>
                 </div>
-                <div class="mb-3">
+                <div class="form-floating mb-3">
                 	<label for="tel-field" class="form-label">프로필이미지</label>
-                	<input type="file" class="form-control" name="profileFile" id="profile-file-field" placeholder="010-1234-5678"/>
+                	<input type="file" class="form-control" name="profileFile" id="profile-file-field" />
                 </div>
-                <div class="text-end">
-                	<a href="/" class="btn btn-secondary">취소</a>
-                	<button type="submit" class="btn btn-primary">회원가입</button>
-                </div>
-            </form:form>
+            </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-primary" id="btn-register">등록하기</button>
       </div>
     </div>
   </div>
@@ -84,7 +76,9 @@
 <script type="text/javascript">
 $(function() {
 	
-	
+	$("#btn-register").click(function() {
+		
+	})
 	
 }
 )
